@@ -21,9 +21,10 @@ class controlador{
         elseif ($enlaces =="Inicio") {
 
             include "vistas/modulos/Inicio.php";
+           
         }
        else {
-       include_once "Index.php";
+        include "vistas/modulos/Inicio.php";
        }
 
     }

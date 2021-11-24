@@ -6,14 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Biblioteca</title>
 
+<!--Aqui reseteamos los valores que estan predeterminados, los marjenes-->
 <style>
 
-header{
-position:relative;
-margin:auto;
-text-align:center;
-padding:5px;
+ *{
+     margin: 0;
+     padding: 0;
+     list-style: none;
+ }   
 
+header{
+margin:auto;
+padding:10px;
+background: #002277; 
+}
+
+#login{
+position: relative;
+margin: 10px 1500px;
+width: 50px;
+text-align: left;
+border: 3px solid white;
+background: blue;
+
+}
+
+#logo{
+position: left;    
 }
 
 nav{
@@ -27,8 +46,8 @@ background:blue;
 nav ul{
 position:relative;
 margin:auto;
-width:50%;
-text-align:center;
+width:90%;
+text-align:left;
 }
 
 nav ul li{
@@ -48,11 +67,21 @@ position:relative;
 padding:20px;
 }
 
+body{
+background: #1097EE;
+
+}
 </style>
 </head>
-<header>
-<h1> Biblioteca</h1>
 
+<header>
+    <div id=""><h1> Biblioteca</h1></div>
+
+    <div id="login">
+        <ul>
+            <li><a herf="Index.php?seccion1=login"></a><b>Login</b></li>
+        </ul>
+    </div>
 </header>
 
 <body>
@@ -62,6 +91,7 @@ padding:20px;
     include "modulos/navegacion.php";
     
 ?>
+
 
 </body>
 </html>
