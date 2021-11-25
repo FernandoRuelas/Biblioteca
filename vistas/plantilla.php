@@ -46,7 +46,7 @@ background:blue;
 nav ul{
 position:relative;
 margin:auto;
-width:90%;
+width:100%;
 text-align:left;
 }
 
