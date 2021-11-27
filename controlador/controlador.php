@@ -13,14 +13,15 @@ class controlador{
        $enlaces = $_GET["accion"];
 
        if ( $enlaces =="Perfil"||
-            $enlaces =="Libros") {
+            $enlaces =="Libros"||
+            $enlaces =="Inicio") {
 
        include "vistas/modulos/".$enlaces.".php";
         }
 
-        elseif ($enlaces =="Inicio") {
+        elseif ($enlaces =="Login") {
 
-            include "vistas/modulos/Inicio.php";
+            include "vistas/modulos/Login.php";
            
         }
        else {

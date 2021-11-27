@@ -17,18 +17,19 @@
 
 header{
 margin:auto;
+height: 100px;
 padding:10px;
 background: #002277; 
 }
 
 #login{
-position: relative;
-margin: 10px 1500px;
-width: 50px;
-text-align: left;
-border: 3px solid white;
-background: blue;
-
+height: 130px;
+width: 300px;
+background: white;
+text-align: center;
+border: 1px solid black;
+position: realtive;
+margin: 100px 200px;
 }
 
 #logo{
@@ -52,9 +53,10 @@ text-align:left;
 
 nav ul li{
 display:inline-block;
-width:30%;
+width:20%;
 line-height:50px;
 list-style: nome;
+margin-left:30px;
 }
 
 nav ul li a{
@@ -77,11 +79,6 @@ background: #1097EE;
 <header>
     <div id=""><h1> Biblioteca</h1></div>
 
-    <div id="login">
-        <ul>
-            <li><a herf="Index.php?seccion1=login"></a><b>Login</b></li>
-        </ul>
-    </div>
 </header>
 
 <body>
