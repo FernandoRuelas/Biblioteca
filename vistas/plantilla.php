@@ -76,9 +76,11 @@ position:relative;
 padding:20px;
 }
 
+/*
 body{
 background-image: url('images/bg.jpg');
 }
+*/
 </style>
 </head>
 

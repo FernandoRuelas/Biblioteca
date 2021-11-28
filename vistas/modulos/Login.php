@@ -1,6 +1,6 @@
+
 <div id="login">
     <h2>Login</h2>
-    
 
     <form action="Login.php" method="post">
     <table>
@@ -23,7 +23,7 @@
 
       <tr>
         <td></td>
-        <td><input type="submit" value="login" name="sent"></td>
+        <td><input type="submit" value="Login" name="sent"></td>
       </tr>
 
     </table>
