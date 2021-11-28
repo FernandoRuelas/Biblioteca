@@ -1,1 +1,1 @@
-<h1>Inicio.</h1>
+<h1 style="color:white">Inicio.</h1>

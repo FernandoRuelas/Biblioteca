@@ -1,10 +1,6 @@
-
-
-
-
-
 <div id="login">
     <h2>Login</h2>
+    
 
     <form action="Login.php" method="post">
     <table>

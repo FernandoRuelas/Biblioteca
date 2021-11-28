@@ -1,1 +1,1 @@
-<h1>Libros</h1>
+<h1 style="color:white">Libros</h1>

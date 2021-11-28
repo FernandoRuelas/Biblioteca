@@ -17,19 +17,26 @@
 
 header{
 margin:auto;
-height: 100px;
+height: 40px;
 padding:10px;
-background: #002277; 
+background: #002277;
+ 
 }
 
 #login{
 height: 130px;
 width: 300px;
 background: white;
-text-align: center;
 border: 1px solid black;
-position: realtive;
-margin: 100px 200px;
+
+position: fixed;
+top: 50%;
+left: 50%;
+margin-top: -100px;
+margin-left: -200px;
+
+border-radius: 25px;
+padding: 20px;
 }
 
 #logo{
@@ -41,7 +48,7 @@ position:relative;
 margin:auto;
 width:100%;
 height:auto;
-background:blue;
+background:#0774F7;
 }
 
 nav ul{
@@ -70,25 +77,23 @@ padding:20px;
 }
 
 body{
-background: #1097EE;
-
+background-image: url('images/bg.jpg');
 }
 </style>
 </head>
 
 <header>
-    <div id=""><h1> Biblioteca</h1></div>
+    <div id=""><h1 style="color:white"> Biblioteca</h1></div>
 
 </header>
 
 <body>
-
+    
 <?php 
    
     include "modulos/navegacion.php";
     
 ?>
-
 
 </body>
 </html>
