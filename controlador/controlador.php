@@ -10,23 +10,25 @@ class controlador{
 
     public function cambioPaguinas(){
         
-       $enlaces = $_GET["accion"];
+       if (isset($_GET["accion"])) {
 
-       if ( $enlaces =="Perfil"||
-            $enlaces =="Libros"||
-            $enlaces =="Inicio") {
+         if ( $_GET["accion"]=="Perfil"||
+         $_GET["accion"]=="Libros"||
+         $_GET["accion"] =="Inicio") {
+ 
+             include "vistas/modulos/".$_GET["accion"].".php";
+         }
+        elseif ($_GET["accion"] =="Login") {
+ 
+             include "vistas/modulos/Login.php";
+         }
 
-       include "vistas/modulos/".$enlaces.".php";
+        else {
+         include "vistas/modulos/Login.php";
         }
-
-        elseif ($enlaces =="Login") {
-
-            include "vistas/modulos/Login.php";
-           
-        }
-       else {
-        include "vistas/modulos/Inicio.php";
        }
+      else {
+        include "vistas/modulos/Login.php";       }
 
     }
 
