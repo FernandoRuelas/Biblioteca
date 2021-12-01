@@ -28,11 +28,7 @@ class controlador{
         }
        }
       else {
-<<<<<<< HEAD
         include "vistas/modulos/Login.php";       }
-=======
-        include "vistas/modulos/Login.php"; }
->>>>>>> 935f617a6d1c7e35c254ed2c8ea1f6a357707cc1
 
     }
 
