@@ -1,11 +1,19 @@
+<<<<<<< HEAD
 <!-- *****************************************
+=======
+	<!-- *****************************************
+>>>>>>> 935f617a6d1c7e35c254ed2c8ea1f6a357707cc1
 **                Botonera                  **
 ********************************************-->
 
     <!-- Barra de navegacion  -->
 
     
+<<<<<<< HEAD
 <nav>
+=======
+    <nav>
+>>>>>>> 935f617a6d1c7e35c254ed2c8ea1f6a357707cc1
     <ul>
 
  <?php if (isset($_GET["accion"])): ?>
@@ -40,7 +48,10 @@
     <li><a href="Index.php?accion=Perfil"style= "color:white"> Perfil</a></li>
     <li class= "colorBtnNav"><a class="active" href="Index.php?accion=Login" style= "color:white"> Login</a></li>
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 935f617a6d1c7e35c254ed2c8ea1f6a357707cc1
 <?php endif ?>
 
     </ul>
