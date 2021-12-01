@@ -23,9 +23,73 @@ background: #002277;
  
 }
 
+#Buscador{
+position: fixed;
+height: 40px;
+width: 250px;
+background: white;
+border: 1px solid black;
+
+top: 40%;
+left: 20%;
+margin-top: -100px;
+margin-left: -200px;
+
+border-radius: 50px;
+padding: 5px;
+}
+
+#inicioPanel {
+    background-color: white;
+    opacity: 90%; 
+    height: 350px;
+    width: 750px;
+    position: fixed;
+    left: 17%;
+    top: 17%;
+    margin-top: 100px;
+    margin-left: -150px;
+    border-radius: 20px; 
+}
+
+#bloqueLibro{
+    background-color: white;
+    opacity: 100%;  
+    height: 200px;
+    width: 750px;
+    position: fixed;
+    left: 17%;
+    top: 17%;
+    margin-top: 100px;
+    margin-left: -150px;
+    border-radius: 20px;
+}
+
+#titulo{
+    margin-top: -5px;
+    margin-left: 150px;
+}
+
+#sectionBook {
+    position: relative;
+    margin: 10px 180px;
+}
+
+#imgBook {
+    width: 700px;
+    position: fixed;
+    top: 40%;
+    left: 8%;
+}
+
+#imgBook p img{
+    float: left;
+}
+
+
 #login{
 height: 130px;
-width: 300px;
+width: 330px;
 background: white;
 border: 1px solid black;
 
@@ -67,20 +131,98 @@ margin-left:30px;
 }
 
 nav ul li a{
-color:black;
+color:white;
 text-decoration:navy;
 }
+
+.active{
+width: 23%;
+font-size: 20px;
+
+animation-name: seciones;
+animation-duration: 0.5s;
+animation-delay: 0s;
+animation-fill-mode: forwards;
+}
+
+@keyframes seciones {
+  from {top: 0px; background-color: #0774F7;}
+  to {top: 20px; background-color: #0A3254;}
+}
+
+.colorBtnNav{
+background:#0A3254;
+
+animation-name: seciones;
+animation-duration: 0.5s;
+animation-delay: 0s;
+animation-fill-mode: forwards;
+}
+
 
 section{
 position:relative;
 padding:20px;
 }
 
-/*
+#userBox {
+background-color: white;
+  background-image: url("images/user.png");
+  background-position: 1px 1px; 
+  background-repeat: no-repeat;
+  padding: 5px 5px 5px 40px;
+}
+
+#passBox {
+background-color: white;
+  background-image: url("images/password.png");
+  background-position: 1px 1px; 
+  background-repeat: no-repeat;
+  padding: 5px 5px 5px 40px;
+}
+
+#Box{
+    right: 5px;
+    resize: none;
+}
+
+#infoUser {
+     margin: 20px 30px;
+ }
+
+ #nomUser {
+     margin: 5px 20px;
+     font-weight: 700;
+ }
+
+ #imgUser {
+     margin: 15px;
+     max-width: 255px;
+     max-height: 255px;
+ }
+
+
+#Pregunta {
+    position: fixed;
+    right: 5px;
+    top: 200px;
+    background: white;
+    height: 360px;
+    width: 275px;
+    border-radius: 20%;
+    vertical-align: middle;
+}
+
+
 body{
 background-image: url('images/bg.jpg');
+width: 100%;
+height: 100%;
+margin: 0;
+padding: 0;
+
 }
-*/
+
 </style>
 </head>
 
@@ -91,7 +233,7 @@ background-image: url('images/bg.jpg');
 
 <body>
     
-<?php 
+<?php
    
     include "modulos/navegacion.php";
     
