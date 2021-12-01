@@ -50,6 +50,7 @@ padding: 5px;
     margin-top: 100px;
     margin-left: -150px;
     border-radius: 20px; 
+    border: 1px solid black;
 }
 
 #bloqueLibro{
@@ -211,6 +212,7 @@ background-color: white;
     width: 275px;
     border-radius: 20%;
     vertical-align: middle;
+    border: 1px solid black;
 }
 
 
