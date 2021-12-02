@@ -1,11 +1,16 @@
 <?php 
  
-require_once "controlador/controlador.php";
+include ("controlador/controlador.php");
 $P = new controlador();
 $P ->plantilla();   
+
+include("controlador/LoginControlador.php");
 
 
 $P1 = new controlador();
 $P1 ->cambioPaguinas();   
+ 
+
+
 
 ?>
