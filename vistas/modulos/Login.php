@@ -2,9 +2,9 @@
 <div id="login">
     <h2>Login</h2>
   
-    <?php include( "controlador/LoginControlador.php");?>
+    <?php //include( "controlador/LoginControlador.php");?>
   
-    <form action="controlador/LoginControlador.php" method="post">
+    <form action="LoginControlador.php" method="post">
       <table>
         <tr>
           <td> <label for="id" type="font_size:36">ID:</label> </td>

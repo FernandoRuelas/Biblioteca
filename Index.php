@@ -4,7 +4,7 @@ include ("controlador/controlador.php");
 $P = new controlador();
 $P ->plantilla();   
 
-include("controlador/LoginControlador.php");
+include("LoginControlador.php");
 
 
 $P1 = new controlador();
