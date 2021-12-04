@@ -104,6 +104,7 @@ border-radius: 25px;
 padding: 20px;
 }
 
+
 #logo{
 position: left;    
 }
@@ -188,20 +189,23 @@ background-color: white;
 }
 
 #infoUser {
-     margin: 20px 30px;
- }
+    position: fixed;
+    margin: 20px 30px;
+}
 
- #nomUser {
-     margin: 5px 20px;
-     font-weight: 700;
- }
+#nomUser {
+    position: fixed;
+    margin: 5px 20px;
+    font-weight: 700;
+    right: 850px;
+}
 
- #imgUser {
-     margin: 15px;
-     max-width: 255px;
-     max-height: 255px;
- }
-
+#imgUser {
+    position: fixed;
+    margin: 15px;
+    max-width: 255px;
+    max-height: 255px;
+}
 
 #Pregunta {
     position: fixed;

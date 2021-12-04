@@ -1,16 +1,6 @@
 <?php 
- 
-include ("controlador/controlador.php");
-$P = new controlador();
-$P ->plantilla();   
 
-include("LoginControlador.php");
+    require_once "vistas/modulos/Login.php";
 
-
-$P1 = new controlador();
-$P1 ->cambioPaguinas();   
- 
-
-
-
-?>
+    
+?>z

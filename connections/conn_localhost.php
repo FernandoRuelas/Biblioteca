@@ -5,8 +5,7 @@ $baseDatos = "biblioteca";
 $usuarioBd = "root";
 $passwordBd = "";
 
-$connLocalhost = mysqli_connect($servidor, $usuarioBd, $passwordBd)
-	or trigger_error(mysqli_error(), E_USER_ERROR);
+$connLocalhost = mysqli_connect($servidor, $usuarioBd, $passwordBd) or die('Error al intentar conectar');
 
 mysqli_query($connLocalhost, "SET NAMES 'utf8'");
 

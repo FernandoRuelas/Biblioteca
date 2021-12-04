@@ -1,6 +1,6 @@
 <?php
 
-if (isset($_POST['sent'])) {
+
            
   // Inicializamos la sesión o la retomamos
   if(!isset($_SESSION)) {
@@ -41,17 +41,17 @@ if (isset($_POST['sent'])) {
         $_SESSION['userCorreo'] = $userData['email'];
         $_SESSION['userRol'] = $userData['rol'];
 
-      
       // Redireccionamos al usuario al panel de control
      
-      header( 'location:index.php');
+      header( 'location:plantillaControlador.php');
       }
       else {
         $error[] = "Login failed";
+        echo "caca";
       }
   }
   }
-}
+
 
 
 

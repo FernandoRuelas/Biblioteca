@@ -1,4 +1,3 @@
-<h1 style="color:white">Inicio.</h1>
 <html lang="es">
     <body>
        
@@ -53,3 +52,4 @@
         </div>
     </body>
 </html>
+
