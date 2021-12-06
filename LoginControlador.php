@@ -47,7 +47,7 @@
       }
       else {
         $error[] = "Login failed";
-        echo "caca";
+       header ('Location: Index.php');
       }
   }
   }
