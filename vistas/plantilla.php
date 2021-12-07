@@ -85,8 +85,28 @@ padding: 5px;
 
 #imgBook p img{
     float: left;
+    top: 40%;
+    left: 8%;
+
 }
 
+#bloqueAdmi {
+    position: fixed;
+    top: 25%;
+    left: 65%;
+}
+
+#MostrarReservados {
+    position: fixed;
+    top: 25%;
+    left: 65%;
+}
+
+#comprarLibro {
+    position: fixed;
+    top: 25%;
+    left: 65%;
+}
 
 #login{
 height: 130px;
@@ -188,9 +208,21 @@ background-color: white;
     resize: none;
 }
 
+#nomDesc {
+    position: fixed;
+    right: 72%;
+    top: 23%;
+}
+
 #infoUser {
     position: fixed;
     margin: 20px 30px;
+
+    background-color: white;
+    opacity: 100%; 
+    height: 350px;
+    width: 1250px;
+    border-radius: 25px;
 }
 
 #nomUser {
