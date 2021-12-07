@@ -220,7 +220,7 @@ background-color: white;
 
     background-color: white;
     opacity: 100%; 
-    height: 350px;
+    height: 480px;
     width: 1250px;
     border-radius: 25px;
 }

@@ -1,7 +1,4 @@
-<?php
-
-
-           
+<?php   
   // Inicializamos la sesión o la retomamos
   if(!isset($_SESSION['userNombre'])) {
     session_start();
@@ -21,7 +18,7 @@
 
   if(!isset($error)) {
        // Armamos el query para verificar el email y el password en la BD
-        $queryLogin = sprintf("SELECT id, nombre, email, rol FROM usuario WHERE id = '%s' AND password = '%s'",
+        $queryLogin = sprintf("SELECT id, nombre, descripcion, email, rol FROM usuario WHERE id = '%s' AND password = '%s'",
           mysqli_real_escape_string($connLocalhost, trim($_POST['id'])),
           mysqli_real_escape_string($connLocalhost, trim($_POST['password']))
      
@@ -39,6 +36,7 @@
           $_SESSION['userId'] = $userData['id'];
           $_SESSION['userRol'] = $userData['rol'];
           $_SESSION['userNombre'] = $userData['nombre'];
+          $_SESSION['userDescripcion'] = $userData['descripcion'];
           $_SESSION['userCorreo'] = $userData['email'];
          
 

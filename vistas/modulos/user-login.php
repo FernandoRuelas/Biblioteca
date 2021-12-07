@@ -17,7 +17,7 @@ if(isset($_POST['sent'])) {
 
         if(!isset($error)) {
             // Armamos el query para verificar el email y el password en la BD
-            $queryLogin = sprintf("SELECT id, nombre, email, rol FROM usuario WHERE id = '%s' AND password = '%s'",
+            $queryLogin = sprintf("SELECT id, nombre, descripcion, email, rol FROM usuario WHERE id = '%s' AND password = '%s'",
             mysqli_real_escape_string($connLocalhost, trim($_POST['id'])),
             mysqli_real_escape_string($connLocalhost, trim($_POST['password'])));
 
@@ -33,6 +33,7 @@ if(isset($_POST['sent'])) {
                 //Definimos variables de sesion en $_SESSION
                 $_SESSION['userId'] = $userData['id'];
                 $_SESSION['userNombre'] = $userData['nombre'];
+                $_SESSION['userDescripcion'] = $userData['descripcion'];
                 $_SESSION['userEmail'] = $userData['email'];
                 $_SESSION['userRol'] = $userData['rol'];
                 echo $_SESSION['userNombre'];

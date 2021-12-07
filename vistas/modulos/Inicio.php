@@ -1,22 +1,17 @@
 <html lang="es">
     <body>
-       
-        <!--Contenido del sitio-->
-        <div class="cabecera-imagen"><!--Slider-->
 
-            <!--<img src="images/ITSON.png">-->
-        </div>
         <div id="inicioPanel" class="inicio">
         <section class="contenido">
-                <article class="info">
-                    <h2>Informacion de la biblioteca</h2>
-                        <h1>Infromacion general</h1>
-                        <p>Aqui se describira informacion de la biblioteca como por ejemplo la ubicacion y otros datos sobre ella.</p>
-                        <p>Tambien se habalra sobre como funciona la plataforma y lo que se puede hacer con ella.</p>
-                        <p>Los videos e imagenes son de apoyo como tipos tutoriales.</p>
+            <article class="info">
+                <h2>Informacion de la biblioteca</h2>
+                <h1>Infromacion general</h1>
+                <p>Aqui se describira informacion de la biblioteca como por ejemplo la ubicacion y otros datos sobre ella.</p>
+                <p>Tambien se habalra sobre como funciona la plataforma y lo que se puede hacer con ella.</p>
+                <p>Los videos e imagenes son de apoyo como tipos tutoriales.</p>
 
-                </article>
-            </section>
+            </article>
+        </section>
 
             <!--como reservar-->
             <div class="como reservar">
