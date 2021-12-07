@@ -1,5 +1,5 @@
 <?php 
-
+session_start();
 // muestra la plantilla
 class controlador{
 
@@ -14,8 +14,7 @@ class controlador{
 
             if (isset($_GET["accion"])) {
 
-                if ( $_GET["accion"]=="Perfil"||
-                $_GET["accion"]=="Libros"||
+                if ( $_GET["accion"]=="Libros"||
                 $_GET["accion"] =="Inicio") {
 
                     include "vistas/modulos/".$_GET["accion"].".php";
@@ -23,6 +22,19 @@ class controlador{
 
                 elseif ($_GET['accion']=="Salir") {
                      include"vistas/modulos/Salir.php";
+
+                }
+                elseif ($_GET["accion"]== "Perfil") {
+                    if ($_SESSION['userRol']=="admin") {
+                        include "vistas/modulos/PerfilAdmi.php";
+                    }
+                    elseif ($_SESSION['userRol']=="maestro") {
+                        include "vistas/modulos/PerfilMaestro.php";
+                    }
+                    else {
+                        include "vistas/modulos/Perfil.php";
+                    }
+                    
 
                 }
 
@@ -41,6 +53,12 @@ class controlador{
                  
 
     }
+
+    public function Login(){
+        include "vistas/modulos/Login.php";
+    }
+
+    
 
     
 }

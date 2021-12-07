@@ -13,32 +13,31 @@
 
 
 
-
-<div id= "MostrarReservados">
-
-    <table class="default">
-
+<form action="Perfil.php" method="post">
+      <table>
         <tr>
-
-            <td>Celda 1</td>
-
-            <td>Celda 2</td>
-
-            <td>Celda 3</td>
-
+          <td> <label for="idLibro" type="font_size:36">ID del libro:</label> </td>
+          <td><input id="userBox" type="text" name="idLibro" value="<?php echo isset($_POST['idLibro']) ? $_POST['idLibro'] : ""; ?>"></td>
         </tr>
 
         <tr>
-
-            <td>Celda 4</td>
-
-            <td>Celda 5</td>
-
-            <td>Celda 6</td>
+          <td> <label for="nombreLibro"> Nombre del libro: </td>
+          <td> <input id="userBox" type="text" name="nombreLibro"> </td>
 
         </tr>
+        
 
-    </table>
+        <tr>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
 
-</div>
+        <tr>
+          <td></td>
+         
+          <td><input type="submit" value="Comprar" name="comprarLibro"></td>
+        </tr>
+
+      </table>
+    </form>
 

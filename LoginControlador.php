@@ -3,7 +3,7 @@
 
            
   // Inicializamos la sesión o la retomamos
-  if(!isset($_SESSION)) {
+  if(!isset($_SESSION['userNombre'])) {
     session_start();
   }
 
@@ -28,7 +28,7 @@
       );
 
       // Ejecutamos el query
-      $resQueryLogin = mysqli_query($connLocalhost, $queryLogin);//or trigger_error("The user login query failed");
+      $resQueryLogin = mysqli_query($connLocalhost, $queryLogin) or trigger_error("The user login query failed");
       // Determinamos si el login es valido (email y password coincidentes)
       // Contamos el recordset (el resultado para un login valido es 1)
       if(mysqli_num_rows($resQueryLogin)) {
@@ -36,14 +36,15 @@
         $userData = mysqli_fetch_assoc($resQueryLogin);
 
       // Definimos variables de sesion en $_SESSION
-        $_SESSION['userId'] = $userData['id'];
-        $_SESSION['userNombre'] = $userData['nombre'];
-        $_SESSION['userCorreo'] = $userData['email'];
-        $_SESSION['userRol'] = $userData['rol'];
+          $_SESSION['userId'] = $userData['id'];
+          $_SESSION['userRol'] = $userData['rol'];
+          $_SESSION['userNombre'] = $userData['nombre'];
+          $_SESSION['userCorreo'] = $userData['email'];
+         
 
       // Redireccionamos al usuario al panel de control
      
-      header( 'location:plantillaControlador.php');
+      header( 'location:Index.php');
       }
       else {
         $error[] = "Login failed";
