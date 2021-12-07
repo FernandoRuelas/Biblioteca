@@ -25,7 +25,7 @@
       );
 
       // Ejecutamos el query
-      $resQueryLogin = mysqli_query($connLocalhost, $queryLogin) or trigger_error("The user login query failed");
+      $resQueryLogin = mysqli_query($connLocalhost, $queryLogin);// or trigger_error("The user login query failed");
       // Determinamos si el login es valido (email y password coincidentes)
       // Contamos el recordset (el resultado para un login valido es 1)
       if(mysqli_num_rows($resQueryLogin)) {

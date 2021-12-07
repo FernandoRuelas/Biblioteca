@@ -24,11 +24,19 @@ position:fixed;
 right: 80%; 
 top: 60%;
 }
+
+body{
+background-image: url('images/bg.jpg');
+
+}
 </style>
+
+<?php include("connections/conn_localhost.php");?>
 
 <div id=infoUser>
   <div id=nomDesc>
     <h2 style="position:fixed;" id="nomUser"><h1><?php echo $_SESSION['userNombre'];?> </h1> </h2>
+    
     <textarea id="inputDesc" name="Desc" disabled="true" value="<?php echo $_SESSION['userDescripcion'];?>"> </textarea>
     <input id="Guardar" disabled="true" type="submit" value="Guardar" name="Guardar" onclick="inputDesc.disabled=true, Guardar.disabled=true"> </input>
   </div>
@@ -43,7 +51,7 @@ top: 60%;
 
 <div id="bloqueAdmi">
     <div id="AgregarLibro">
-    <form action="PerfilAdmi.php" method="post">
+    <form action="PerfilAdmiControlador.php" method="post">
       <h1>Agregar Libros</h1>
       <table>
 
@@ -52,7 +60,6 @@ top: 60%;
           <td> <input id="userBox" type="text" name="nombreLibro"> </td>
 
         </tr>
-
         <tr>
           <td> <label for="prologoLibro"> Prologo: </td>
           <td> <input id="userBox" type="text" name="prologoLibro"> </td>
@@ -107,7 +114,7 @@ top: 60%;
 
 
     <div id="EliminarLibros">
-        <form action="PerfilAdmi.php" method="post">
+        <form action="EliminarControlador.php" method="post">
         <h1>Eliminar Libros</h1>
         <table>
             <tr>
