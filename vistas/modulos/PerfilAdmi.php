@@ -56,7 +56,7 @@ background-image: url('images/bg.jpg');
       <table>
 
         <tr>
-          <td> <label for="nombreLibro"> Titulo: </td>
+          <td> <label for="tituloLibro"> Titulo: </td>
           <td> <input id="userBox" type="text" name="nombreLibro"> </td>
 
         </tr>
@@ -111,8 +111,6 @@ background-image: url('images/bg.jpg');
 
     </div>
 
-
-
     <div id="EliminarLibros">
         <form action="EliminarControlador.php" method="post">
         <h1>Eliminar Libros</h1>
@@ -132,11 +130,6 @@ background-image: url('images/bg.jpg');
 
     <div id="ModificarLibros">
 
-    
-
-
-
     </div>
-
 
 </div>
