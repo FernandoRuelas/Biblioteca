@@ -1,5 +1,3 @@
-
-
 <style>
 #inputDesc {
 width: 300px;
@@ -34,8 +32,6 @@ background-color: white;
   width: 20px;
 }
 
-
-
 body{
 background-image: url('images/bg.jpg');
 
@@ -62,9 +58,17 @@ background-image: url('images/bg.jpg');
 
 <div id="bloqueAdmi">
     <div id="AgregarLibro">
-    <form action="AgregarLibrosControlador.php" method="post">
+    <form action="PerfilAdmiControlador.php" method="post">
       <h1>Agregar Libros</h1>
       <table>
+
+        <tr>
+          <td> <label for="idLibro"> Id: </td>
+          <td> <input id="miniBox" disabled="true" type="text" name="idLibro"> </td>
+
+          <td> <input type="button" value="Editar por id" name="editarLibro" onclick="miniBox.disabled=false, Modificar.disabled=false"></td>
+
+        </tr>
 
         <tr>
           <td> <label for="tituloLibro"> Titulo: </td>
@@ -80,6 +84,12 @@ background-image: url('images/bg.jpg');
         <tr>
           <td> <label for="autorLibro" type="font_size:36">Autor:</label> </td>
           <td><input id="userBox" type="text" name="autorLibro" value="<?php echo isset($_POST['autorLibro']) ? $_POST['autorLibro'] : ""; ?>"></td>
+        </tr>
+
+        <tr>
+          <td> <label for="paginasLibro"> Paginas: </td>
+          <td> <input id="userBox" type="text" name="PaginasLibro"> </td>
+
         </tr>
 
         <tr>
@@ -99,10 +109,6 @@ background-image: url('images/bg.jpg');
           <td> <input id="userBox" type="text" name="urlImagenLibro"> </td>
 
         </tr>
-
-        <tr>
-          <td> <label for="paginasLibro"> Paginas: </td>
-          <td> <input id="userBox" type="text" name="PaginasLibro"> </td>
         
         <tr>
           <td>&nbsp;</td>
@@ -112,7 +118,8 @@ background-image: url('images/bg.jpg');
         <tr>
           <td></td>
          
-          <td><input type="submit" value="Agregar" name="AgregarLibro"></td>
+          <td><input type="submit" value="Agregar" name="Agregar"></td>
+          <td><input id="Modificar" type="submit" disabled="true" value="Modificar" name="Modificar"></td>
         </tr>
 
       </table>
@@ -121,92 +128,20 @@ background-image: url('images/bg.jpg');
     </div>
 
     <div id="EliminarLibros">
-        <form action="EliminarControlador.php" method="post">
+        <form action="PerfilAdmiControlador.php" method="post">
         <h1>Eliminar Libros</h1>
         <table>
             <tr>
-            <td> <label for="idLibro" type="font_size:36">Id del libro:</label> </td>
-            <td><input id="userBox" type="text" name="idLibro" value="<?php echo isset($_POST['idLibro']) ? $_POST['idLibro'] : ""; ?>"></td>
+            <td> <label for="idLibroEliminar" type="font_size:36">Id del libro:</label> </td>
+            <td><input id="userBox" type="text" name="idLibroEliminar" value="<?php echo isset($_POST['idLibroEliminar']) ? $_POST['idLibroEliminar'] : ""; ?>"></td>
             </tr>
 
             <tr>
             <td></td>
             
-            <td><input type="submit" value="Eliminar" name="ElimiarLibro"></td>
+            <td><input type="submit" value="Eliminar" name="Elimiar"></td>
             </tr>
 
     </div>
 
-
-
-    <div id="ModificarLibros">
-    <form action="EditarControlador.php" method="post">
-      <h1>Modificar Libros</h1>
-      <table>
-
-        <tr>
-          <td> <label for="idLibro"> Id: </td>
-          <td> <input id="miniBox" type="text" name="idLibro1"> </td>
-        </tr>
-
-        <tr>
-          <td> <label for="tituloLibro"> Titulo: </td>
-          <td> <input id="userBox" type="text" name="nombreLibro1"> </td>
-
-        </tr>
-        <tr>
-          <td> <label for="prologoLibro"> Prologo: </td>
-          <td> <input id="userBox" type="text" name="prologoLibro1"> </td>
-
-        </tr>
-
-        <tr>
-          <td> <label for="autorLibro" type="font_size:36">Autor:</label> </td>
-          <td><input id="userBox" type="text" name="autorLibro1" value="<?php echo isset($_POST['autorLibro']) ? $_POST['autorLibro'] : ""; ?>"></td>
-        </tr>
-
-        <tr>
-          <td> <label for="DisponibilidadLibro"> Disponibilidad: </td>
-          <td> <input id="userBox" type="text" name="DisponibilidadLibro1"> </td>
-
-        </tr>
-
-        <tr>
-          <td> <label for="stockLibro"> Stock: </td>
-          <td> <input id="userBox" type="text" name="StockLibro1"> </td>
-
-        </tr>
-
-        <tr>
-          <td> <label for="urlImagenLibro"> Imagen: </td>
-          <td> <input id="userBox" type="text" name="urlImagenLibro1"> </td>
-
-        </tr>
-
-        <tr>
-          <td> <label for="paginasLibro"> Paginas: </td>
-          <td> <input id="userBox" type="text" name="PaginasLibro1"> </td>
-        
-        <tr>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
-        </tr>
-
-        <tr>
-          <td></td>
-         
-          <td><input type="submit" value="Modificar" name="ModificarLibro"></td>
-        
-        </tr>
-
-      </table>
-    </form>
-
-    </div>
-
-
-    
-
 </div>
-
-
