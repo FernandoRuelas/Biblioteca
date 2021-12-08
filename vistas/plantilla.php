@@ -61,7 +61,7 @@ padding: 5px;
     position: fixed;
     left: 17%;
     top: 17%;
-    margin-top: 100px;
+    margin-top: 250px;
     margin-left: -150px;
     border-radius: 20px;
 }
