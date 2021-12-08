@@ -2,37 +2,33 @@
 
 session_start();
 
-include("connections/conn_localhost.php");
+// Inicializamos la sesión o la retomamos
+if(!isset($_SESSION)) {
+    session_start();
+    
+  }
+  
+  // Incluimos la conexión a la BD
+  include('connections/conn_localhost.php');
 
-foreach($_POST as $calzon => $caca) {
-    if($caca == "") $error[] = "The field $calzon is required";
-}
+  
+    if(isset($_POST['idLibro'])) {
+  
+      // Preparamos la consulta para actualizar el registro del usuario en la BD
+      $queryDeleteUser = sprintf("DELETE FROM Libro WHERE id = %d",
+        mysqli_real_escape_string($connLocalhost, trim($_POST['idLibro']))
+      );
+  
+      // Ejecutamos el query
+     mysqli_query($connLocalhost, $queryDeleteUser); //or trigger_error("El query de eliminación de usuarios falló");
+  
+      // Evaluamos el resultado de la ejecución del query (puede ser true o false)
 
-if (!isset($error)) {
-   
-
-    $queryDeleteUser = sprintf("DELETE FROM usuarios WHERE id = %d",
-    mysqli_real_escape_string($connLocalhost, $_POST['idLibro'])
-  );
-
-  // Ejecutamos el query
-  $resQueryDeleteUser = mysqli_query($connLocalhost, $queryDeleteUser)
-    or trigger_error("El query de eliminación de usuarios falló");
-
-
-    // Ejecutamos el query en la BD
-    mysqli_query($connLocalhost, $resQueryDeleteUser) or trigger_error("La inserción del registro del usuario ha fallado");
-
-    // Reporte de errores detallado
-    // mysqli_query($connLocalhost, $queryInsertUser) or trigger_error(mysqli_error($connLocalhost), E_USER_ERROR);
-
-    // Si todo sale bien (se guardó en la BD), redireccionamos al usuario al Panel de Control
-    header("Location: Index.php");
-}
-else {
-    echo "Regrese asia atras, es nesesario llenar todo el formulario";
-}
-
-
-
+      header("Location: Index.php");
+    
+    }
+    else {  
+      echo"Regrese asia atras y introdusca los datos";
+    }
+  
 ?>

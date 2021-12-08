@@ -39,18 +39,13 @@ top: 60%;
 
 </div>
 
-<form id="comprarLibro" action="Perfil.php" method="post">
+<form id="comprarLibro" action="EliminarControlador.php" method="post">
   <table>
     <tr>
       <td> <label for="idLibro" type="font_size:36">ID del libro:</label> </td>
       <td><input id="userBox" type="text" name="idLibro" value="<?php echo isset($_POST['idLibro']) ? $_POST['idLibro'] : ""; ?>"></td>
     </tr>
-
-    <tr>
-      <td> <label for="nombreLibro"> Nombre del libro: </td>
-      <td> <input id="userBox" type="text" name="nombreLibro"> </td>
-    </tr>
-    
+  
     <tr>
       <td>&nbsp;</td>
       <td>&nbsp;</td>

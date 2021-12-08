@@ -51,7 +51,7 @@ background-image: url('images/bg.jpg');
 
 <div id="bloqueAdmi">
     <div id="AgregarLibro">
-    <form action="PerfilAdmiControlador.php" method="post">
+    <form action="AgregarLibrosControlador.php" method="post">
       <h1>Agregar Libros</h1>
       <table>
 
@@ -117,7 +117,7 @@ background-image: url('images/bg.jpg');
         <table>
             <tr>
             <td> <label for="idLibro" type="font_size:36">Id del libro:</label> </td>
-            <td><input id="userBox" type="text" name="autorLibro" value="<?php echo isset($_POST['idLibro']) ? $_POST['idLibro'] : ""; ?>"></td>
+            <td><input id="userBox" type="text" name="idLibro" value="<?php echo isset($_POST['idLibro']) ? $_POST['idLibro'] : ""; ?>"></td>
             </tr>
 
             <tr>
