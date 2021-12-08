@@ -13,7 +13,7 @@ if(!isset($_SESSION)) {
 
   
     if(isset($_POST['idLibro'])) {
-  
+
       // Preparamos la consulta para actualizar el registro del usuario en la BD
       $queryDeleteUser = sprintf("DELETE FROM Libro WHERE id = %d",
         mysqli_real_escape_string($connLocalhost, trim($_POST['idLibro']))
