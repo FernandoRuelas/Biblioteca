@@ -27,7 +27,7 @@ top: 60%;
 <div id=infoUser>
   <div id=nomDesc>
     <h2 style="position:fixed;" id="nomUser"><h1><?php echo $_SESSION['userNombre'];?> </h1> </h2>
-    <textarea id="inputDesc" name="Desc" disabled="true" value="<?php echo $_SESSION['userDescripcion'];?>"> </textarea>
+    <input id="inputDesc" name="Desc" disabled="true" value="<?php echo $_SESSION['userDescripcion'];?>"> </input>
     <input id="Guardar" disabled="true" type="submit" value="Guardar" name="Guardar" onclick="inputDesc.disabled=true, Guardar.disabled=true"> </input>
   </div>
 

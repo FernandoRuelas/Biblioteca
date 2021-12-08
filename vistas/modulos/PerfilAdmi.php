@@ -25,6 +25,15 @@ right: 80%;
 top: 60%;
 }
 
+#miniBox {
+background-color: white;
+  background-image: url("images/user.png");
+  background-position: 1px 1px; 
+  background-repeat: no-repeat;
+  padding: 5px 5px 5px 40px;
+  width: 20px;
+}
+
 body{
 background-image: url('images/bg.jpg');
 
@@ -37,7 +46,7 @@ background-image: url('images/bg.jpg');
   <div id=nomDesc>
     <h2 style="position:fixed;" id="nomUser"><h1><?php echo $_SESSION['userNombre'];?> </h1> </h2>
     
-    <textarea id="inputDesc" name="Desc" disabled="true" value="<?php echo $_SESSION['userDescripcion'];?>"> </textarea>
+    <input id="inputDesc" name="Desc" disabled="true" value="<?php echo $_SESSION['userDescripcion'];?>"> </input>
     <input id="Guardar" disabled="true" type="submit" value="Guardar" name="Guardar" onclick="inputDesc.disabled=true, Guardar.disabled=true"> </input>
   </div>
 
@@ -54,6 +63,14 @@ background-image: url('images/bg.jpg');
     <form action="AgregarLibrosControlador.php" method="post">
       <h1>Agregar Libros</h1>
       <table>
+
+        <tr>
+          <td> <label for="idLibro"> Id: </td>
+          <td> <input id="miniBox" disabled="true" type="text" name="idLibro"> </td>
+
+          <td> <input type="button" value="Editar por id" name="editarLibro" onclick="miniBox.disabled=false, Modificar.disabled=false"></td>
+
+        </tr>
 
         <tr>
           <td> <label for="tituloLibro"> Titulo: </td>
@@ -104,6 +121,7 @@ background-image: url('images/bg.jpg');
           <td></td>
          
           <td><input type="submit" value="Agregar" name="AgregarLibro"></td>
+          <td><input id="Modificar" type="submit" disabled="true" value="Modificar" name="Modificar"></td>
         </tr>
 
       </table>
