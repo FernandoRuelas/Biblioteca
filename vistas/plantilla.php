@@ -30,7 +30,7 @@ width: 250px;
 background: white;
 border: 1px solid black;
 
-top: 40%;
+top: 30%;
 left: 20%;
 margin-top: -100px;
 margin-left: -200px;

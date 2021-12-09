@@ -14,42 +14,44 @@ margin-left: -200px;
 border-radius: 25px;
 padding: 20px;
 }
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 15px;
+}
 
 </style>
 
-<?php
-if(!isset($_SESSION)) {
-    session_start();
-}
 
-include("connections/conn_localhost.php");
-
-$queryGetLibros = "SELECT titulo, prologo, autor, disponibilidad, noPaginas FROM libro";
-
-$resQueryGetLibros = mysqli_query($connLocalhost, $queryGetLibros)
-  or trigger_error("El query de obtención de todos los usuarios falló");
-
-$totalLibros = mysqli_num_rows($resQueryGetLibros);
-
-$LibrosData = mysqli_fetch_assoc($resQueryGetLibros);
-?>
 
 <body>
-    <div id="listado" class="txt_listado">
-        <h2>Libros</h2>
-        <p>Total libros: <?php echo $totalLibros; ?></p>
 
-        <ul class="listadoLibros">
-            <?php 
-            do { 
-            ?>
-                <li>
-                    <p class="LibroData"> <?php echo $LibrosData['titulo'].' | '.$LibrosData['autor'].' | '.$LibrosData['disponibilidad'].' | '.$LibrosData['noPaginas']; ?></p>
-                    <!--<p class="accionesLibro"> <a href="reservar.php?idLibro= <?php //echo $LibrosData['id'] ;?></a></p>-->
-                </li>
-                <?php
-            } while($LibrosData = mysqli_fetch_assoc($resQueryGetLibros));
-                ?>
-        </ul>
+   
+
+    <div id=Buscador>
+        <form action="MostrarLibros.php" method="post">  
+            <table>
+                <tr>
+                
+                    <td><input id="userBox" type="text" name="Buscador" value="<?php echo isset($_POST['Buscador']) ? $_POST['Buscador'] : ""; ?>"></td>
+                    <td></td>   
+                    <td><input type="submit" value="Bucar" name="BuscarLibro"></td>
+                </tr>
+
+        
+            </table>
+
+        </form>   
+
+
+
     </div>
+
+   
 </body>
+
+
+

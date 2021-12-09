@@ -1,37 +1,141 @@
-<div id=bloqueLibro>
+<style>
+#listado{
+height: 65%;
+width: 50%;
+background: white;
+border: 1px solid black;
 
-<?php include("connections/conn_localhost.php");?>
-  
-    
-    <?php if (isset($_POST['Buscar'])) {  ?>
+position: fixed;
+top: 40%;
+left: 35%;
+margin-top: -100px;
+margin-left: -200px;
 
-     
+border-radius: 25px;
+padding: 20px;
+}
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
 
-        <?php $queryMostrar=sprintf("SELECT id, UrlImagen, titulo, prologo, autor, noPaginas FROM libro where titulo=%s",
-      mysqli_real_escape_string($connLocalhost, trim($_POST['Titulo'])));?>
-        <?php $result=mysqli_query($connLocalhost, $queryMostrar);?>   
-        
-       <?php  if(mysqli_num_rows($result)){?>
-        
-             <table>
+th, td {
+  padding: 15px;
+}
 
-            <?php while($mostrar=mysqli_fetch_array($result) ){?>
-                
+body{
+   
+background-image: url('images/bg.jpg');
+width: 100%;
+height: 100%;
+margin: 0;
+padding: 0;
+
+
+}
+</style>
+
+
+
+<body>
+
+   
+
+    <div id=Buscador>
+        <form action="MostrarLibros.php" method="post">  
+            <tableU>
                 <tr>
-                    <td><?php echo $mostrar['id']?></td>
-                    <td><img src="<<?php echo $mostrar['UrlImagen']?>"></td>
-                    <td><strong><?php echo $mostrar['titulo']?></strong></td>
-                    <td><p><?php echo $mostrar['prologo']?></p></td>
-                    <td><?php echo $mostrar['autor']?></td>
-                    <td><?php echo $mostrar['noPaginas']?></td>
-                    <td><input type="button" id="Reservar" onclick=" location.href= 'vistas/modulos/reservar.php' " value="reservar" name="reservar"/></td>
+                
+                    <td><input id="userBox" type="text" name="Buscador" value="<?php echo isset($_POST['Buscador']) ? $_POST['Buscador'] : ""; ?>"></td>
+                    <td></td>   
+                    <td><input type="submit" value="Bucar" name="BuscarLibro"></td>
                 </tr>
 
-            <?php }?>
+        
+            </tableU>
 
+        </form>   
+
+
+
+    </div>
+    <div id=Buscador>
+        <form action="Index.php" method="post">  
+            <table1>
+                <tr>
+                    <td></td>   
+                    <td><input type="submit" value="Menu Principal" name="Menu"></td>
+                </tr>
+
+        
+            </table1>
+
+        </form>   
+
+
+
+    </div>
+
+   
+         <?php if(!isset($_SESSION)) { 
+            session_start();
+        }?>
+        <?php if (isset($_POST['Buscador'])) { ?>
+           
             
-            </table>
+            <?php include("connections/conn_localhost.php"); ?>
+
+             <?php $queryGetLibros = sprintf("SELECT id, titulo, prologo, autor, disponibilidad, UrlImagen, noPaginas FROM libro WHERE titulo='%s'",
+                 mysqli_real_escape_string($connLocalhost, trim($_POST['Buscador']))
+            ); ?>
+    
+             <?php $resQueryGetLibros = mysqli_query($connLocalhost, $queryGetLibros)
+             or trigger_error("El libro no esta disponible"); ?>
+    
+             <?php $totalLibros = mysqli_num_rows($resQueryGetLibros);?>
+    
+             <?php $LibrosData = mysqli_fetch_assoc($resQueryGetLibros);?>
+            
+            <div id="listado" class="txt_listado">
+
+                <table>
+
+                        <tr>
+                            <th>ID</th>
+                            <th>Portada</th>
+                            <th>Ttitulo</th>
+                            <th>Genero</th>
+                            <th>Autor</th>
+                            <th>noPaginas</th>
+                            <th>Reserva</th>
+                        </tr>
+                
+
+                    
+                    <?php do{?>
+                        
+                    
+                        <tr>
+                            <td><?php echo $LibrosData['id']?></td>
+                            <td><img src="<<?php echo $LibrosData['UrlImagen']?>" width="100" height="100" ></td>
+                            <td><strong><?php echo $LibrosData['titulo']?></strong></td>
+                            <td><p><?php echo $LibrosData['prologo']?></p></td>
+                            <td><?php echo $LibrosData['autor']?></td>
+                            <td><?php echo $LibrosData['noPaginas']?></td>
+                            <td><input type="button" id="Reservar" onclick=" location.href= 'vistas/modulos/reservar.php' " value="reservar" name="reservar"/></td>
+                        </tr>
+
+                    <?php } while($LibrosData=mysqli_fetch_assoc($resQueryGetLibros) )?>
+
+
+                </table>
+                
+                
+
+            </div>
+
         <?php }?>
+</body>
 
 
-    <?php } ?>
+

@@ -39,7 +39,7 @@ top: 60%;
 
 </div>
 
-<form id="comprarLibro" action="EliminarControlador.php" method="post">
+<form id="comprarLibro" action="EliminarAdmiControlador.php" method="post">
   <table>
     <tr>
       <td> <label for="idLibro" type="font_size:36">ID del libro:</label> </td>

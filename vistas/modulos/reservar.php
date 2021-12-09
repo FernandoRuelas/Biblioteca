@@ -79,7 +79,7 @@ button {
   <div id="popUp_contenido" class="popUp-contenido">
     <div class="modal">                  
       <h1>Reservar libro</h1>
-      <form action="ReservarControlador.php" method="post">
+      <form action="../../ReservarControlador.php" method="post">
         <p>Seleccione la fecha a reservar</p>
         <!--CALENDARIO-->
         <label for="reserva">Fecha reserva:</label>
@@ -95,8 +95,8 @@ button {
         <br></br>                                
 
         <!--BOTONES-->
-        <button type="submit" name="reservar" value="Reservar">Reservar </button>
-        <button type="submit" onclick="location.href='Index.php'"> Cancelar </button>
+        <input type="submit" name="reservar" value="Reservar">
+       
     </div>
   </div>
 

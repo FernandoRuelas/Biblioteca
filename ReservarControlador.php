@@ -1,8 +1,9 @@
 <?php
 
 session_start();
+include("connections/conn_localhost.php");
 
-if(isset($_POST['reservar'])) {
+if(isset($_POST['fechaReserva'])) {
      
   foreach($_POST as $calzon => $caca) {
     if($caca == "" && $calzon != "usuario") $error[] = "The field $calzon is required";
@@ -18,5 +19,7 @@ if(isset($_POST['reservar'])) {
     );
 
     mysqli_query($connLocalhost, $queryInsertLibro) or trigger_error("The user login query failed");
+
+    header("Location: Index.php");
   }
 }
