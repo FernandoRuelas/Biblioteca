@@ -128,7 +128,7 @@ background-image: url('images/bg.jpg');
     </div>
 
     <div id="EliminarLibros">
-        <form action="PerfilAdmiControlador.php" method="post">
+        <form action="EliminarAdmiControlador.php" method="post">
         <h1>Eliminar Libros</h1>
         <table>
             <tr>
