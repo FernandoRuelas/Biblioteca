@@ -55,20 +55,5 @@ if($_POST['Modificar'] == "Modificar" ) {
         echo "Es nesesario llenar por completo el formulario. Favor de regresar.";
     }
     //----------------------------> ELIMINAR LIBROS <----------------------
-} if($_POST['idLibroEliminar'] == "idLibroEliminar"){
-    if(isset($_POST['idLibro'])) {
-
-        $queryDeleteUser = sprintf("DELETE FROM Libro WHERE id = %d",
-          mysqli_real_escape_string($connLocalhost, trim($_POST['idLibro']))
-        );
-
-        mysqli_query($connLocalhost, $queryDeleteUser); 
-  
-        header("Location: Index.php");
-      
-    }
-    else {  
-        echo"Regrese e introduzca los datos";
-    }
-}
+} 
 ?>
