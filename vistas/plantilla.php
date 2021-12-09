@@ -30,11 +30,10 @@ width: 250px;
 background: white;
 border: 1px solid black;
 
-top: 30%;
+top: 40%;
 left: 20%;
 margin-top: -100px;
 margin-left: -200px;
-
 border-radius: 50px;
 padding: 5px;
 }

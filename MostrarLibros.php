@@ -1,13 +1,13 @@
 <style>
 #listado{
-height: 65%;
-width: 50%;
+height: 75%;
+width: 70%;
 background: white;
 border: 1px solid black;
 
 position: fixed;
-top: 40%;
-left: 35%;
+top: 30%;
+left: 25%;
 margin-top: -100px;
 margin-left: -200px;
 
@@ -31,32 +31,23 @@ height: 100%;
 margin: 0;
 padding: 0;
 
-
 }
 </style>
 
-
-
 <body>
-
-   
 
     <div id=Buscador>
         <form action="MostrarLibros.php" method="post">  
             <tableU>
                 <tr>
-                
                     <td><input id="userBox" type="text" name="Buscador" value="<?php echo isset($_POST['Buscador']) ? $_POST['Buscador'] : ""; ?>"></td>
                     <td></td>   
                     <td><input type="submit" value="Bucar" name="BuscarLibro"></td>
                 </tr>
-
         
             </tableU>
 
         </form>   
-
-
 
     </div>
     <div id=Buscador>
@@ -67,12 +58,9 @@ padding: 0;
                     <td><input type="submit" value="Menu Principal" name="Menu"></td>
                 </tr>
 
-        
             </table1>
 
         </form>   
-
-
 
     </div>
 
@@ -104,13 +92,11 @@ padding: 0;
                             <th>ID</th>
                             <th>Portada</th>
                             <th>Ttitulo</th>
-                            <th>Genero</th>
+                            <th>Prologo</th>
                             <th>Autor</th>
                             <th>noPaginas</th>
                             <th>Reserva</th>
                         </tr>
-                
-
                     
                     <?php do{?>
                         
@@ -129,8 +115,6 @@ padding: 0;
 
 
                 </table>
-                
-                
 
             </div>
 

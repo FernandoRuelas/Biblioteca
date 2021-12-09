@@ -8,9 +8,7 @@ class controlador{
         include "vistas/plantilla.php";
     }
     //Realiza cambio de paguinas
-    public function cambioPaguinas(){
-
-        
+    public function cambioPaguinas(){     
 
             if (isset($_GET["accion"])) {
 
@@ -35,7 +33,6 @@ class controlador{
                         include "vistas/modulos/Perfil.php";
                     }
                     
-
                 }
 
                 else {
@@ -47,20 +44,12 @@ class controlador{
                 include "vistas/modulos/Inicio.php";
             }
            
-                   
-        
-            
-                 
-
     }
 
     public function Login(){
         include "vistas/modulos/Login.php";
     }
 
-    
-
-    
 }
 
 ?>

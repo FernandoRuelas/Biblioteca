@@ -4,7 +4,7 @@
 }
 
 body {
-  background-color: #35afe7;
+  background-image: url('../../images/bg.jpg');
   font-family: 'Poppins', sans-serif;
   display: flex;
   align-items: center;
@@ -44,7 +44,7 @@ button {
 }
 
 .modal {
-  background-color: #fff;
+  background-color: white;
   width: 600px;
   max-width: 100%;
   padding: 30px 50px;
@@ -92,7 +92,11 @@ button {
 
         <label for="entrega">Nombre de usuario:</label>
         <input type="text" id="nUser" name="usuario"></input>
-        <br></br>                                
+        <br></br> 
+        
+        <label for="entrega">Nombre de Libro:</label>
+        <input type="text" id="libro" name="libro"></input>
+        <br></br>
 
         <!--BOTONES-->
         <input type="submit" name="reservar" value="Reservar">

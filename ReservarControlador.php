@@ -10,8 +10,7 @@ if(isset($_POST['fechaReserva'])) {
   }
 
   if(!isset($error)) {
-    $queryInsertLibro = sprintf("INSERT INTO reserva (fechaEntrega, fechaReserva, usuario, libro) VALUES ('%s', '%s', '%s', '%s')",
-        
+    $queryInsertLibro = sprintf("INSERT INTO reservas (fechaAparto, fechaEntrega, usuario, libro) VALUES ('%s', '%s', '%s', '%s')",
     mysqli_real_escape_string($connLocalhost, trim($_POST['fechaEntrega'])),
     mysqli_real_escape_string($connLocalhost, trim($_POST['fechaReserva'])),
     mysqli_real_escape_string($connLocalhost, trim($_POST['usuario'])),

@@ -29,7 +29,7 @@
             </section>
         </div>
 
-        <!--Preguntas y respuestas-->
+        <!--Preguntas y respuestas 
         <div id="Pregunta" class="Pregunta"> 
             <section class="preguntas">
             <aside class="Preguntas y respuestas">
@@ -38,13 +38,13 @@
                 <div>  
                     <textarea id="Box" name="titulo" placeholder="Escribe el asunto aquí..." style="width:220px;height:20px"></textarea>
                      <br></br>
-                     <textarea id="Box" name="pregunta" placeholder="Escribe tu pregunta aquí..." style="height:200px; width:220px"></textarea>
+                     <textarea id="Box" name="pregunta" placeholder="Escribe tu pregunta aquí..." style="height:200px; width:220px"></textarea> -->
                        <!--<button type="submit" value="Enviar" name="enviar"></button>-->
                        <td><input type="submit" value="Enviar" name="sent"></td>
                     </div>           
                 </aside>
             </section>
-        </div>
+        </div> 
     </body>
 </html>
 

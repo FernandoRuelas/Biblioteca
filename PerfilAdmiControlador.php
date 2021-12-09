@@ -19,12 +19,11 @@ foreach($_POST as $calzon => $caca) {
 
 if($_POST['Modificar'] == "Modificar" ) {
     if(!isset($error)) {
-        $queryUpdateLibro = sprintf("UPDATE libro SET titulo = '%s', prologo = '%s', autor = '%s', disponibilidad = '%s', stock = '%s', UrlImagen = '%s', noPaginas = '%s' WHERE id = {$_POST['idLibro']}",
+        $queryUpdateLibro = sprintf("UPDATE libro SET titulo = '%s', prologo = '%s', autor = '%s', disponibilidad = '%s', UrlImagen = '%s', noPaginas = '%s' WHERE id = {$_POST['idLibro']}",
         mysqli_real_escape_string($connLocalhost, trim($_POST['nombreLibro'])),
         mysqli_real_escape_string($connLocalhost, trim($_POST['prologoLibro'])),
         mysqli_real_escape_string($connLocalhost, trim($_POST['autorLibro'])),
         mysqli_real_escape_string($connLocalhost, trim($_POST['DisponibilidadLibro'])),
-        mysqli_real_escape_string($connLocalhost, trim($_POST['StockLibro'])),
         mysqli_real_escape_string($connLocalhost, trim($_POST['urlImagenLibro'])),
         mysqli_real_escape_string($connLocalhost, trim($_POST['PaginasLibro']))
         );
@@ -37,12 +36,11 @@ if($_POST['Modificar'] == "Modificar" ) {
     //----------------------------> AGREGAR LIBROS <----------------------
 } else { //($_POST['Agregar'] == "Agregar") 
     if (!isset($error)) {
-        $queryInsertLibros = sprintf("INSERT INTO libro (titulo, prologo, autor, disponibilidad, stock, UrlImagen, noPaginas) VALUES ('%s', '%s', '%s', '%s', '%s', '%s', '%s')",
+        $queryInsertLibros = sprintf("INSERT INTO libro (titulo, prologo, autor, disponibilidad, UrlImagen, noPaginas) VALUES ('%s', '%s', '%s', '%s', '%s', '%s')",
         mysqli_real_escape_string($connLocalhost, trim($_POST['nombreLibro'])),
         mysqli_real_escape_string($connLocalhost, trim($_POST['prologoLibro'])),
         mysqli_real_escape_string($connLocalhost, trim($_POST['autorLibro'])),
         mysqli_real_escape_string($connLocalhost, trim($_POST['DisponibilidadLibro'])),
-        mysqli_real_escape_string($connLocalhost, trim($_POST['StockLibro'])),
         mysqli_real_escape_string($connLocalhost, trim($_POST['urlImagenLibro'])),
         mysqli_real_escape_string($connLocalhost, trim($_POST['PaginasLibro']))
         );
@@ -54,6 +52,5 @@ if($_POST['Modificar'] == "Modificar" ) {
     else {
         echo "Es nesesario llenar por completo el formulario. Favor de regresar.";
     }
-    //----------------------------> ELIMINAR LIBROS <----------------------
 } 
 ?>

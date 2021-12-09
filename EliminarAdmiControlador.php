@@ -49,16 +49,16 @@ elseif (isset($_POST['comprarLibro'])) {
           
         
 
-        $queryComprar ="INSERT INTO compra (fechaCompra, usuario, libro) VALUES ('12/12/12','papa','mama')";
+        $queryComprar ="INSERT INTO compras (usuario, libro) VALUES ('$usuario','$libro')";
     
         mysqli_query($connLocalhost, $queryComprar) or trigger_error("La inserción del registro del usuario ha fallado");; 
 
 
-        //$queryDeleteUser = sprintf("DELETE FROM libro WHERE id = %d",
-        //mysqli_real_escape_string($connLocalhost, trim($_POST['idLibro']))
-          //  );
+        $queryDeleteUser = sprintf("DELETE FROM libro WHERE id = %d",
+        mysqli_real_escape_string($connLocalhost, trim($_POST['idLibro']))
+            );
     
-       // mysqli_query($connLocalhost, $queryDeleteUser); 
+        mysqli_query($connLocalhost, $queryDeleteUser); 
       
       
         header("Location: Index.php");
@@ -70,5 +70,3 @@ elseif (isset($_POST['comprarLibro'])) {
     }
     
 }
-
-?>
